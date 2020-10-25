@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">QueridaCamara</string>
+
+    <!-- App Setup -->
+    <string name="back4app_app_id">3jEyJeNninkFc1bnqwrPGdk5y9kUfeKUh7JycwEG</string>
+    <string name="back4app_client_key">zTwQwe0mPJDsOSYlrMt9Non4JcGhhwY2n0G6dIOk</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Log in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_login">Sign in</string>
+
+</resources>
