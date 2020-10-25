@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvTitleNewPost"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:text="New Post"
+        android:text="@string/new_post"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,13 +26,10 @@
         android:layout_margin="10dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Enter a description"
+        android:hint="@string/enter_a_description"
         android:inputType="textMultiLine"
         android:maxLines="5"
-        android:padding="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleNewPost" />
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btnTakePicture"
@@ -41,7 +38,7 @@
         android:layout_margin="10dp"
         android:backgroundTint="#D500F9"
         android:padding="10dp"
-        android:text="Take Picture"
+        android:text="@string/take_picture"
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@+id/etDescription"
         tools:layout_editor_absoluteX="166dp" />
@@ -52,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginTop="10dp"
+        android:contentDescription="@string/image"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -65,11 +63,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:backgroundTint="#D500F9"
-        android:text="Post"
+        android:text="@string/post"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPostPicture" />
+
 
 </LinearLayout>

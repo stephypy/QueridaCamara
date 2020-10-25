@@ -16,5 +16,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="post">Post</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="image">Image</string>
+    <string name="enter_a_description">Enter a description</string>
+    <string name="new_post">New Post</string>
 
 </resources>
