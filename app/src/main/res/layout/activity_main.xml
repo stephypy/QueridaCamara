@@ -70,5 +70,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPostPicture" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:padding="10dp"
+        android:tooltipText="Log out"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
 
 </LinearLayout>

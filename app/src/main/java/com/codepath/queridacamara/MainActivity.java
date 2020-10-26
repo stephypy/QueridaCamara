@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -29,11 +30,13 @@ import com.parse.SaveCallback;
 import java.io.File;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
 
+    FloatingActionButton fabLogOut;
     TextView tvTitleNewPost;
     EditText etDescription;
     Button btnTakePicture;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnPostPicture;
     File photoFile;
     String photoFileName = "photo.jpg";
+    ParseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
         btnTakePicture = findViewById(R.id.btnTakePicture);
         ivPostPicture = findViewById(R.id.ivPostPicture);
         btnPostPicture = findViewById(R.id.btnPostPicture);
+        fabLogOut =  findViewById(R.id.fabLogOut);
+
+        currentUser = ParseUser.getCurrentUser();
+
+        fabLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logUserOut();
+            }
+        });
 
         btnTakePicture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,11 +87,17 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "There is no image!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description, currentUser, photoFile);
             }
         });
+    }
 
+    private void logUserOut() {
+        ParseUser.logOut();
+        currentUser = ParseUser.getCurrentUser();
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void launchCamera() {
