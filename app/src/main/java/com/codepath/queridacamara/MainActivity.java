@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.codepath.queridacamara.fragments.ComposeFragment;
 import com.codepath.queridacamara.fragments.PostFragment;
+import com.codepath.queridacamara.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.ParseUser;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new ComposeFragment();
                         break;
                     case R.id.action_profile:
-                        fragment = new ComposeFragment();
+                        fragment = new ProfileFragment();
                         break;
                     // R.id.action_home
                     default:
