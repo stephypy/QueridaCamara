@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    FloatingActionButton fabLogOut;
     ParseUser currentUser;
     final FragmentManager fragmentManager = getSupportFragmentManager();
     BottomNavigationView bottomNavigationView;
@@ -32,16 +31,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fabLogOut =  findViewById(R.id.fabLogOut);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         currentUser = ParseUser.getCurrentUser();
 
+        /*
+        TODO: Move log out to profile fragment
         fabLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logUserOut();
             }
         });
+         */
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
