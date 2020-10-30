@@ -8,13 +8,11 @@ import androidx.fragment.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.codepath.queridacamara.fragments.ComposeFragment;
 import com.codepath.queridacamara.fragments.PostFragment;
 import com.codepath.queridacamara.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.ParseUser;
 
 

@@ -23,6 +23,16 @@
             android:text="@string/new_post"
             android:textSize="24sp" />
 
+        <ImageView
+            android:id="@+id/ivPostPicture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/image"
+            android:padding="10dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
         <EditText
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
@@ -45,16 +55,6 @@
             android:text="@string/take_picture"
             android:textColor="#FFFFFF"
             tools:layout_editor_absoluteX="166dp" />
-
-        <ImageView
-            android:id="@+id/ivPostPicture"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/image"
-            android:padding="10dp"
-            tools:srcCompat="@tools:sample/avatars" />
 
         <Button
             android:id="@+id/btnPostPicture"
